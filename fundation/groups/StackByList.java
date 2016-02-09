@@ -3,16 +3,24 @@ package fundation.groups;
 import java.util.Iterator;
 
 public class StackByList<Item> implements Iterable<Item> {
-
-	private Node first ;
-	private int N ;
+	private class StackByListIterator implements Iterator<Item>{
+		private Node current = first ;
+		public boolean hasNext() { return current != null ; }
+		public void remove() { }
+		public Item next(){
+			Item item = current.item ;
+			current = current.next ;
+			return item ;
+		}
+	}
 	private class Node{
 		Item item ;
 		Node next ;
 	}
 	
-	public boolean isEmpty() { return first == null ; }
-	public int size() { return N ; }
+	private Node first ;
+	private int N ;
+	
 	public void push(Item item){
 		Node oldFirst = first ;
 		first = new Node() ;
@@ -29,18 +37,9 @@ public class StackByList<Item> implements Iterable<Item> {
 	
 	@Override
 	public Iterator<Item> iterator() {
-		// TODO Auto-generated method stub
 		return new StackByListIterator() ;
 	}
-	private class StackByListIterator implements Iterator<Item>{
-		private Node current = first ;
-		public boolean hasNext() { return current != null ; }
-		public void remove() { }
-		public Item next(){
-			Item item = current.item ;
-			current = current.next ;
-			return item ;
-		}
-	}
 
+	public boolean isEmpty() { return first == null ; }
+	public int size() { return N ; }
 }
