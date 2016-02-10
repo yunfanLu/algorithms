@@ -1,5 +1,5 @@
 package sort;
-
+@SuppressWarnings("rawtypes")
 public class MergeSort extends Sort {
 	private static Comparable[] aux ;
 	

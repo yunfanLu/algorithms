@@ -3,7 +3,7 @@ package sort;
 public class Snippet {
 	
 	public static void main(String[] args) {
-		final int max_N = 100 ;
+		final int max_N = 10 ;
 		Double[] a = new Double[max_N] ;
 		for(int i = 0 ; i < a.length ; i ++){
 			a[i] = i * 1.0 ;
@@ -14,7 +14,8 @@ public class Snippet {
 // 		InsertSort.sort(a) ;
 // 		ShellSort.sort(a) ;
 //		MergeSort.sort(a);
-		QuickSort.sort(a);
+//		QuickSort.sort(a);
+		HeapSort.sort(a);
 		Sort.show(a) ;
 		boolean isSort = Sort.isSorted(a) ;
 		if(isSort == false){

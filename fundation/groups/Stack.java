@@ -2,14 +2,13 @@ package fundation.groups;
 
 import java.util.Iterator;
 
+@SuppressWarnings("unchecked")
 public class Stack<Item> implements Iterable<Item> {
 
-	@SuppressWarnings("unchecked")
 	private Item[] a = (Item[]) new Object[1] ;
 	private int N = 0 ;
 	
 	private void resize(int max) {
-		@SuppressWarnings("unchecked")
 		Item[] temp = (Item[]) new Object[max] ;
 		for(int i = 0 ; i < N ; i ++) { temp[i] = a[i] ; }
 		a = temp ;

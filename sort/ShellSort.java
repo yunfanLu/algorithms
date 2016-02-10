@@ -1,6 +1,7 @@
 package sort;
 
 public class ShellSort extends Sort{
+	@SuppressWarnings("rawtypes")
 	public static void sort(Comparable[] a){
 		int N = a.length ;
 		int h = 1 ;

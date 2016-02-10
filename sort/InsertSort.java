@@ -1,5 +1,5 @@
 package sort;
-
+@SuppressWarnings("rawtypes")
 public class InsertSort extends Sort {
 	public static void sort(Comparable[] a){
 		for(int i = 1 ; i < a.length ; i ++){

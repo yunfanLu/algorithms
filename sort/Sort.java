@@ -1,7 +1,9 @@
 package sort;
 
+@SuppressWarnings("rawtypes")
 public abstract class Sort {
 	public static void sort(Comparable[] a) {}
+	@SuppressWarnings("unchecked")
 	public static boolean less(Comparable v , Comparable u){
 		return v.compareTo(u) < 0 ;
 	}
