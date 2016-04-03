@@ -13,7 +13,7 @@ public class Stack<Item> implements Iterable<Item> {
 		for(int i = 0 ; i < N ; i ++) { temp[i] = a[i] ; }
 		a = temp ;
 	}
-	public void push(Item item){
+	public void push(Item item) {
 		if(N == a.length) resize(2 * a.length) ;
 		a[N ++] = item ;
 	}

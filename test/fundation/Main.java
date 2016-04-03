@@ -1,5 +1,6 @@
 package test.fundation;
 import java.io.File;
+
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.Scanner;
@@ -7,6 +8,7 @@ import java.util.Scanner;
 import fundation.BinarySearch;
 
 public class Main{
+	
 	/**
 	 * ²âÊÔ¶þ·Ö
 	 * @throws IOException
